@@ -426,8 +426,21 @@ SQL> SELECT *
 
 
 
-25)WAQTD ALL THE DETAILS OF EMPLOYEES HIRED
-IN NOVEMBER AND DECEMBER.
+25)WAQTD ALL THE DETAILS OF EMPLOYEES HIRED IN NOVEMBER AND DECEMBER.
+
+SQL> SELECT *
+  2  FROM EMP
+  3  WHERE HIREDATE LIKE '%NOV%' OR HIREDATE LIKE '%DEC%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+
+
 26)LIST ALL THE EMPLOYEE NAMES AND
 COMISSION FOR THOSE EMPLOYEES WHO EARN
 COMISSION MORE THAN THEIR SALARY
