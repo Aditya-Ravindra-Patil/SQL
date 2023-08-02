@@ -245,6 +245,35 @@ SQL> SELECT AVG(SAL),JOB
 
 16.WAQTD NUMBER OF EMPLOYEES HIRED INTO THE SAME DEPARTMENT
 ON THE SAME DAY
+
+SQL> SELECT COUNT(*),HIREDATE,DEPTNO
+  2  FROM EMP
+  3  GROUP BY HIREDATE,DEPTNO;
+
+  COUNT(*) HIREDATE      DEPTNO
+---------- --------- ----------
+         1 22-FEB-81         30
+         1 01-MAY-81         30
+         1 08-SEP-81         30
+         1 28-SEP-81         30
+         1 20-FEB-81         30
+         1 23-JAN-82         10
+         1 17-DEC-80         20
+         1 17-NOV-81         10
+         1 19-APR-87         20
+         1 23-MAY-87         20
+         1 03-DEC-81         20
+
+  COUNT(*) HIREDATE      DEPTNO
+---------- --------- ----------
+         1 02-APR-81         20
+         1 09-JUN-81         10
+         1 03-DEC-81         30
+
+14 rows selected.
+
+
+
 17.WAQTD NUMBER OF EMPLOYEES GETTING THE SAME SALARY ,
 WORKING IN THE SAME DEPARTMENT
 18.WAQTD MAXIMUM SALARY GIVEN IN EACH DESIGNATION EXCLUDING
