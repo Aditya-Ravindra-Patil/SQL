@@ -166,6 +166,19 @@ SQL> SELECT MAX(SAL),DEPTNO
 
 11. WRITE A QUERY TO DISPLAY NO OF TIMES THE SALARIES HAVE
 REPEATED IN THE EMP TABLE.
+
+SQL> select sal,count(sal)
+  2  from emp
+  3  group by sal
+  4  having count(sal)>1;
+
+       SAL COUNT(SAL)
+---------- ----------
+      1250          2
+      3000          2
+
+
+
 12.WRITE A QUERY TO DISPLAY DEPTNO AND MUNBER OF EMPLOYEES
 WHORKING IN EACH DEPARTMENT EXCEPT FOR THOSE WORKING IN DEPT
 10
