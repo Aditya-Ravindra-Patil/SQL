@@ -182,6 +182,19 @@ SQL> select sal,count(sal)
 12.WRITE A QUERY TO DISPLAY DEPTNO AND MUNBER OF EMPLOYEES
 WHORKING IN EACH DEPARTMENT EXCEPT FOR THOSE WORKING IN DEPT
 10
+
+SQL> select deptno,count(ename)
+  2  from emp
+  3  where deptno!=10
+  4  group by deptno;
+
+    DEPTNO COUNT(ENAME)
+---------- ------------
+        30            6
+        20            5
+
+
+
 13.WAQTD NUMBER OF EMPLOYEES GETTING COMISSION IN EACH
 DEPARTMENT
 14.WAQTD NUMBER OF EMPLOYEES GETTING SALARY MORE THAN 1600
