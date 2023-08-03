@@ -11,6 +11,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 1.DISPLAY ALL THE EMPLOYEES WHOSE DEPARTMET NAMES ENDING 'S'
+
 2.QUERY TO DISPLAY THE EMPLOYEE NAMES WHO IS HAVING MAXIMUM SALARY IN DEPT
 NAME "ACCOUNTING"
 3.QUERY TO DISPLAY THE DEPT NAME WHO IS HAVING HIGHEST COMMISSION
