@@ -1,4 +1,15 @@
-QUESTIONS on SUBQUERY
+                                                                      QUESTIONS on SUBQUERY
+
+
+    DEPTNO DNAME          LOC
+---------- -------------- -------------
+        10 ACCOUNTING     NEW YORK
+        20 RESEARCH       DALLAS
+        30 SALES          CHICAGO
+        40 OPERATIONS     BOSTON
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 1.DISPLAY ALL THE EMPLOYEES WHOSE DEPARTMET NAMES ENDING 'S'
 2.QUERY TO DISPLAY THE EMPLOYEE NAMES WHO IS HAVING MAXIMUM SALARY IN DEPT
 NAME "ACCOUNTING"
