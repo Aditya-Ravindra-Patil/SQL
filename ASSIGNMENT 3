@@ -52,6 +52,23 @@ KING
 
 
 3.QUERY TO DISPLAY THE DEPT NAME WHO IS HAVING HIGHEST COMMISSION
+
+
+  1  select dname
+  2  from dept
+  3  where deptno in(select deptno
+  4  from emp
+  5  where comm in(select max(comm)
+  6* from emp))
+  7  ;
+
+DNAME
+--------------
+SALES
+
+
+
+
 4. QUERY TO DISPLAY THE EMPLOYEE NAMES WHOSE DEPARTMENT NAME HAS 2ND
 CHARACTER AS 'O'.
 5. QUERY TO DISPLAY ALL THE EMPLOYEES WHO’S DEPT NUMBER IS SAME AS SCOTT.
