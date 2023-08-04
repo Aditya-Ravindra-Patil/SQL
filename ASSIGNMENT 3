@@ -103,6 +103,18 @@ no rows selected
 
 
 6.QUERY TO DISPLAY ALL THE EMPLOYEES IN 'OPERATIONS AND ACCOUNTING' DEPT.
+
+  1  select *
+  2  from emp
+  3  where deptno in(select deptno
+  4  from dept
+  5* where dname like 'OPERATIONS' or dname like 'ACOUNTING')
+  6  ;
+
+no rows selected
+
+
+
 7.LIST THE EMPLOYEES WHO HAS SALARY GREATER THAN MILLER
 8. LIST DEPARTMENT NAME HAVING ATLEAST 3 SALESMAN
 9. DISPLAY THE DNAME OF AN EMPLOYEES WHO HAS NO REPORTING MANAGER.
