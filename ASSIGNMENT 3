@@ -143,6 +143,23 @@ FORD
 
 
 8. LIST DEPARTMENT NAME HAVING ATLEAST 3 SALESMAN
+
+
+  1  select dname
+  2  from dept
+  3  where deptno in(select deptno
+  4  from emp
+  5  where job = 'SALESMAN'
+  6  group by deptno
+  7* having count(job)>=3)
+  8  ;
+
+DNAME
+--------------
+SALES
+
+
+
 9. DISPLAY THE DNAME OF AN EMPLOYEES WHO HAS NO REPORTING MANAGER.
 10. LIST ALL THE EMPLOYEES WHO ARE REPORTING TO JONES MANAGER
 11. LIST EMPLOYEES FROM RESEARCH&ACCOUNTING HAVING ATLEAST 2 REPORTING.
