@@ -381,6 +381,21 @@ SMITH
 
 
 18. DISPLAY THE JOB, MANAGER NUMBER OF EMPLOYEES WHO IS WORKING FOR JONES?
+
+  1  select job,mgr
+  2  from emp
+  3  where mgr in(select empno
+  4  from emp
+  5* where ename like 'JONES')
+  6  ;
+
+JOB              MGR
+--------- ----------
+ANALYST         7566
+ANALYST         7566
+
+
+
 19. DISPLAY THE EMPLOYEE NAMES, HIGHER DATE, COMMISSION OF FORD'S MANAGER?
 20. DISPLAY THE NUMBER OF EMPLOYEES WHO ARE GETTING SALARY LESS THAN THE
 BLAKE'S MANAGER
