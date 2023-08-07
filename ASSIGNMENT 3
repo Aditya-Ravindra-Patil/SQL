@@ -328,6 +328,31 @@ DALLAS
 
 16. WRITE A QUERY TO DISPLAY ALL THE EMPLOYEE WHOSE JOB NOT SAME AS ALLEN
 AND SALARY IS GREATER THAN MARTIN.
+
+
+  1  SELECT *
+  2  FROM EMP
+  3  WHERE JOB!=(SELECT JOB
+  4  FROM EMP
+  5  WHERE ENAME LIKE 'ALLEN') AND SAL>(SELECT SAL
+  6  FROM EMP
+  7* WHERE ENAME LIKE 'MARTIN')
+  8  ;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+7 rows selected.
+
+
+
 17. DISPLAY ALL THE EMPLOYEES WHO IS HAVING LOCATION IS SAME AS ADAM'S
 MANAGER?
 18. DISPLAY THE JOB, MANAGER NUMBER OF EMPLOYEES WHO IS WORKING FOR JONES?
