@@ -397,6 +397,19 @@ ANALYST         7566
 
 
 19. DISPLAY THE EMPLOYEE NAMES, HIGHER DATE, COMMISSION OF FORD'S MANAGER?
+
+SQL> select ename,hiredate,comm
+  2  from emp
+  3  where empno in(select mgr
+  4  from emp
+  5  where ename like 'FORD');
+
+ENAME      HIREDATE        COMM
+---------- --------- ----------
+JONES      02-APR-81
+
+
+
 20. DISPLAY THE NUMBER OF EMPLOYEES WHO ARE GETTING SALARY LESS THAN THE
 BLAKE'S MANAGER
 21. LIST EMPLOYEES WHO LOCATED IN CHICAGO AND THEIR COMMISSION IS ZERO.
