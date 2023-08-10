@@ -516,4 +516,22 @@ ACCOUNTING
 
 26. DISPLAY EMPLOYEE DETAILS WHO ARE REPORTING TO BLAKE AND HAVE
 COMMISSION WITHOUT USING NULL OR NOT NULL
+
+  1  SELECT *
+  2  FROM EMP
+  3  WHERE MGR IN(SELECT EMPNO
+  4  FROM EMP
+  5* WHERE ENAME='BLAKE') AND COMM IS NULL OR COMM IS NOT NULL
+  6  ;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+
+
+
 27. LIST ALL THE DEPTNAME AND LOC OF ALL THE SALESMAN MANAGER-MANAGER'S
