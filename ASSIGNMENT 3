@@ -536,4 +536,19 @@ COMMISSION WITHOUT USING NULL OR NOT NULL
 
 27. LIST ALL THE DEPTNAME AND LOC OF ALL THE SALESMAN MANAGER-MANAGER'S
 
+SQL> select dname,loc
+  2  from dept
+  3  where deptno in(select deptno
+  4  from emp
+  5  where empno in(select mgr
+  6  from emp
+  7  where empno in(select mgr
+  8  from emp
+  9  where job='SALESMAN')));
+
+DNAME          LOC
+-------------- -------------
+ACCOUNTING     NEW YORK
+
+
 
