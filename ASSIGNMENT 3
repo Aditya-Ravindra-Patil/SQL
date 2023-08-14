@@ -588,7 +588,28 @@ SQL> SELECT ENAME
 ENAME
 ----------
 SCOTT
-31. DISPLAY LOCATION OF ALL THE EMPLOYEES WHO REPORTING TOBLAKE
+
+
+
+31. DISPLAY LOCATION OF ALL THE EMPLOYEES WHO REPORTING TO BLAKE
+
+SQL> select loc
+  2  from dept
+  3  where deptno in(select deptno
+  4  from emp
+  5  where ename in(select ename
+  6  from emp
+  7  where mgr in(select mgr
+  8  from emp
+  9  where ename='BLAKE')));
+
+LOC
+-------------
+CHICAGO
+DALLAS
+NEW YORK
+
+
 
 32. LIST ALL THE EMPLOYEES WHOSE JOB IS SAME AS JONES ANDTHEIR SALARY LESSER THAN SCOTT
 
